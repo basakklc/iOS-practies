@@ -9,7 +9,6 @@ import UIKit
 
 class OutgoingTVCELL: MessageBaseTVCell {
     
-    @IBOutlet weak var messageLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

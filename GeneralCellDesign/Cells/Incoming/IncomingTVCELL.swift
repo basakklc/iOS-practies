@@ -10,7 +10,7 @@ import UIKit
 class IncomingTVCELL: MessageBaseTVCell {
 
     @IBOutlet weak var profileImgView: UIImageView!
-    @IBOutlet weak var messageLbl: UILabel!
+
 
     
     override func awakeFromNib() {

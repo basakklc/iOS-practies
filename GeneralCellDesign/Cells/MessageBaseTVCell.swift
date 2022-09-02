@@ -12,6 +12,7 @@ class MessageBaseTVCell: UITableViewCell {
     var delegate: MessageCellDelegate?
     @IBOutlet weak var messageImgView: UIImageView!
     @IBOutlet weak var messageContainerView: UIView!
+    @IBOutlet weak var messageLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
