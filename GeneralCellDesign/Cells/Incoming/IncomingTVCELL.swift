@@ -11,10 +11,7 @@ class IncomingTVCELL: MessageBaseTVCell {
 
     @IBOutlet weak var profileImgView: UIImageView!
     @IBOutlet weak var messageLbl: UILabel!
-    @IBOutlet weak var messageImgView: UIImageView!
-    @IBOutlet weak var messageContainerView: UIView!
-    
-    var delegate: MessageCellDelegate?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +28,7 @@ class IncomingTVCELL: MessageBaseTVCell {
         if let messageImage = model.messageImage {
             DispatchQueue.main.async {
                 self.messageImgView.image = messageImage
-                self.setCellHeight(messageImage: messageImage, row: row, imageView: self.messageImgView, delegate: self.delegate!)
+                self.setCellHeight(messageImage: messageImage, row: row)
             }
             configureCell(isHiddenForImage: false)
         }else{
@@ -42,9 +39,6 @@ class IncomingTVCELL: MessageBaseTVCell {
         }
     }
     
-    func configureCell(isHiddenForImage: Bool) {
-        messageImgView.isHidden = isHiddenForImage
-        messageContainerView.isHidden = !isHiddenForImage
-    }
+
     
 }

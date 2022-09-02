@@ -8,6 +8,10 @@
 import UIKit
 
 class MessageBaseTVCell: UITableViewCell {
+    
+    var delegate: MessageCellDelegate?
+    @IBOutlet weak var messageImgView: UIImageView!
+    @IBOutlet weak var messageContainerView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,11 +23,16 @@ class MessageBaseTVCell: UITableViewCell {
 
     }
     
-    func setCellHeight(messageImage: UIImage, row: Int, imageView: UIImageView, delegate: MessageCellDelegate)  {
+    func setCellHeight(messageImage: UIImage, row: Int)  {
         let aspectRatio = messageImage.size.height / messageImage.size.width
-        let imageHeight = imageView.frame.width *  aspectRatio
-        delegate.beginUpdates()
-        delegate.setHeight(height: imageHeight, row: row)
-        delegate.endUpdates()
+        let imageHeight = messageImgView.frame.width *  aspectRatio
+        delegate?.beginUpdates()
+        delegate?.setHeight(height: imageHeight, row: row)
+        delegate?.endUpdates()
+    }
+    
+    func configureCell(isHiddenForImage: Bool) {
+        messageImgView.isHidden = isHiddenForImage
+        messageContainerView.isHidden = !isHiddenForImage
     }
 }
