@@ -8,8 +8,7 @@
 import UIKit
 
 class OutgoingTVCELL: MessageBaseTVCell {
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

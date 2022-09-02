@@ -11,8 +11,6 @@ class IncomingTVCELL: MessageBaseTVCell {
 
     @IBOutlet weak var profileImgView: UIImageView!
 
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -38,7 +36,5 @@ class IncomingTVCELL: MessageBaseTVCell {
             }
         }
     }
-    
-
-    
+ 
 }
