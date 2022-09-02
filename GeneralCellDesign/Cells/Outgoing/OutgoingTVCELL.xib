@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutgoingTVCELL" rowHeight="245" id="KGk-i7-Jjw" customClass="OutgoingTVCELL" customModule="GeneralCellDesign" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="543" height="245"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="543" height="245"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QYK-zS-WFR">
+                        <rect key="frame" x="100" y="10" width="433" height="225"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvL-9v-qf7">
+                        <rect key="frame" x="165.5" y="10" width="367.5" height="225"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asfafgfskjhgjkflgjsngkl asfafgfskjhgjkflgjsngkl asfafgfskjhgjkflgjsngkl" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAo-V6-TPS">
+                                <rect key="frame" x="10" y="10" width="347.5" height="205"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3294117647" green="0.23921568630000001" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VAo-V6-TPS" secondAttribute="trailing" constant="10" id="1OO-Fr-zoy"/>
+                            <constraint firstItem="VAo-V6-TPS" firstAttribute="leading" secondItem="gvL-9v-qf7" secondAttribute="leading" constant="10" id="ZCf-7T-ad5"/>
+                            <constraint firstItem="VAo-V6-TPS" firstAttribute="top" secondItem="gvL-9v-qf7" secondAttribute="top" constant="10" id="pxt-55-MFp"/>
+                            <constraint firstAttribute="bottom" secondItem="VAo-V6-TPS" secondAttribute="bottom" constant="10" id="uOQ-Ue-jtV"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gvL-9v-qf7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="76s-jw-He8"/>
+                    <constraint firstAttribute="bottom" secondItem="gvL-9v-qf7" secondAttribute="bottom" constant="10" id="8RJ-U0-Hsc"/>
+                    <constraint firstItem="QYK-zS-WFR" firstAttribute="top" secondItem="gvL-9v-qf7" secondAttribute="top" id="BZc-Jb-Alk"/>
+                    <constraint firstItem="QYK-zS-WFR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="R5i-4s-M5N"/>
+                    <constraint firstItem="gvL-9v-qf7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Z0s-eN-eTd"/>
+                    <constraint firstItem="QYK-zS-WFR" firstAttribute="trailing" secondItem="gvL-9v-qf7" secondAttribute="trailing" id="uml-dD-Auv"/>
+                    <constraint firstAttribute="trailing" secondItem="gvL-9v-qf7" secondAttribute="trailing" constant="10" id="vtm-L6-mLD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QYK-zS-WFR" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" constant="-10" id="6tT-hE-sjd"/>
+            </constraints>
+            <connections>
+                <outlet property="messageContainerView" destination="gvL-9v-qf7" id="RAm-B0-abx"/>
+                <outlet property="messageImgView" destination="QYK-zS-WFR" id="rDO-hl-NpI"/>
+                <outlet property="messageLbl" destination="VAo-V6-TPS" id="bcQ-h0-ODL"/>
+            </connections>
+            <point key="canvasLocation" x="207.97101449275365" y="-365.95982142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

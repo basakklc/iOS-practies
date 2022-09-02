@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Message View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MessageViewController" customModule="GeneralCellDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Auc-tZ-NJ8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-HI-WYM">
+                                <rect key="frame" x="0.0" y="772" width="344.5" height="34"/>
+                                <color key="backgroundColor" white="0.19105113636363635" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gau-IU-Kwi">
+                                <rect key="frame" x="385" y="772" width="24" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Zvj-BC-VgQ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="tray.and.arrow.down.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="sendBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHJ-F8-clG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt9-ck-kft">
+                                <rect key="frame" x="359.5" y="772" width="20.5" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20.5" id="T1Z-Wl-ma0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="doc.badge.gearshape.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="shareBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJv-ld-92j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="Auc-tZ-NJ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="12R-9w-Ez0"/>
+                            <constraint firstItem="Auc-tZ-NJ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3kY-r1-8o3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Auc-tZ-NJ8" secondAttribute="trailing" id="47u-1H-3jm"/>
+                            <constraint firstItem="dDO-HI-WYM" firstAttribute="top" secondItem="Auc-tZ-NJ8" secondAttribute="bottom" constant="10" id="O3x-6F-OF4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gau-IU-Kwi" secondAttribute="trailing" constant="5" id="WNm-7U-1fU"/>
+                            <constraint firstItem="gau-IU-Kwi" firstAttribute="bottom" secondItem="dDO-HI-WYM" secondAttribute="bottom" id="fAB-BZ-Rw6"/>
+                            <constraint firstItem="mt9-ck-kft" firstAttribute="bottom" secondItem="dDO-HI-WYM" secondAttribute="bottom" id="gDZ-o4-E7p"/>
+                            <constraint firstItem="mt9-ck-kft" firstAttribute="top" secondItem="dDO-HI-WYM" secondAttribute="top" id="gek-s3-omk"/>
+                            <constraint firstItem="gau-IU-Kwi" firstAttribute="leading" secondItem="mt9-ck-kft" secondAttribute="trailing" constant="5" id="gkM-BF-U1B"/>
+                            <constraint firstItem="dDO-HI-WYM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jzm-Bl-5Hw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Auc-tZ-NJ8" secondAttribute="bottom" constant="100" id="lG3-Pz-LWq"/>
+                            <constraint firstItem="gau-IU-Kwi" firstAttribute="top" secondItem="dDO-HI-WYM" secondAttribute="top" id="p2p-gN-vTW"/>
+                            <constraint firstItem="mt9-ck-kft" firstAttribute="leading" secondItem="dDO-HI-WYM" secondAttribute="trailing" constant="15" id="wZm-xq-oS1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageTF" destination="dDO-HI-WYM" id="Stw-wg-BQs"/>
+                        <outlet property="messageTV" destination="Auc-tZ-NJ8" id="nUA-bE-geN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.badge.gearshape.fill" catalog="system" width="122" height="128"/>
+        <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
