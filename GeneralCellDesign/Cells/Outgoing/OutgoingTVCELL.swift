@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OutgoingTVCELL: UITableViewCell {
+class OutgoingTVCELL: MessageBaseTVCell {
     
     @IBOutlet weak var messageContainerView: UIView!
     @IBOutlet weak var messageLbl: UILabel!
@@ -27,7 +27,7 @@ class OutgoingTVCELL: UITableViewCell {
         if let messageImage = model.messageImage{
             DispatchQueue.main.async {
                 self.messageImgView.image = messageImage
-                self.setCellHeight(messageImage: messageImage, row: row)
+                self.setCellHeight(messageImage: messageImage, row: row, imageView: self.messageImgView, delegate: self.delegate!)
             }
             configureCell(isHiddenForImage: false)
         }else{
@@ -41,13 +41,5 @@ class OutgoingTVCELL: UITableViewCell {
     func configureCell(isHiddenForImage: Bool) {
         messageImgView.isHidden = isHiddenForImage
         messageContainerView.isHidden = !isHiddenForImage
-    }
-    
-    func setCellHeight(messageImage: UIImage, row: Int)  {
-        let aspectRatio = messageImage.size.height / messageImage.size.width
-        let imageHeight = self.messageImgView.frame.width *  aspectRatio
-        self.delegate?.beginUpdates()
-        self.delegate?.setHeight(height: imageHeight, row: row)
-        self.delegate?.endUpdates()
     }
 }

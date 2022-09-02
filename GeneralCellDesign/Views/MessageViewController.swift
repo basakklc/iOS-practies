@@ -85,7 +85,7 @@ extension MessageViewController: UITableViewDelegate, UITableViewDataSource {
         if let message = messageList?[indexPath.row] {
             if message.messageCellType == .incoming  {
                 let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTVCELL.className, for: indexPath) as! IncomingTVCELL
-                cell.delagate = self
+                cell.delegate = self
                 cell.bindModel(model: message, row: indexPath.row)
                 return cell
             }

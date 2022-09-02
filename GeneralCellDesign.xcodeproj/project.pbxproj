@@ -25,6 +25,7 @@
 		E9D012D028BF4DEF00F82EA2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D012CF28BF4DEF00F82EA2 /* Message.swift */; };
 		E9F2E6B728C1E87B00E4FAF3 /* MessageCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E6B628C1E87B00E4FAF3 /* MessageCellDelegate.swift */; };
 		E9F2E6B928C1EC7100E4FAF3 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E6B828C1EC7100E4FAF3 /* NSObject.swift */; };
+		E9F2E6BB28C208F500E4FAF3 /* MessageBaseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E6BA28C208F500E4FAF3 /* MessageBaseTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E9D012CF28BF4DEF00F82EA2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E9F2E6B628C1E87B00E4FAF3 /* MessageCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellDelegate.swift; sourceTree = "<group>"; };
 		E9F2E6B828C1EC7100E4FAF3 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		E9F2E6BA28C208F500E4FAF3 /* MessageBaseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBaseTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				E9D012C528BF475800F82EA2 /* Outgoing */,
 				E9D012C428BF474B00F82EA2 /* Incoming */,
+				E9F2E6BA28C208F500E4FAF3 /* MessageBaseTVCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F2E6B728C1E87B00E4FAF3 /* MessageCellDelegate.swift in Sources */,
+				E9F2E6BB28C208F500E4FAF3 /* MessageBaseTVCell.swift in Sources */,
 				E9D0128F28BF450000F82EA2 /* AppDelegate.swift in Sources */,
 				E9D012C828BF477E00F82EA2 /* IncomingTVCELL.swift in Sources */,
 				E9B47AEF28C0E72A00C5543F /* MessageViewModel.swift in Sources */,
